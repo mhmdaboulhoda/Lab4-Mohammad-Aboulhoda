@@ -54,3 +54,28 @@ The system is fully backed by:
    ```bash
    git clone https://github.com/mhmdaboulhoda/Lab4-Mohammad-Aboulhoda.git
    cd Lab4-Mohammad-Aboulhoda
+
+# macOS
+python3.11 -m venv .venv
+source .venv/bin/activate
+
+# Windows
+py -3.11 -m venv .venv
+.venv\Scripts\Activate.ps1
+
+## Install dependencies
+
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install PyQt5 Flask
+
+## Project structure
+.
+├── classes.py        # Core domain models: Student, Instructor, Course
+├── datastore.py      # JSON save/load (export/import all entities & relations)
+├── db.py             # SQLite schema + helpers (init_db, save_all, load_all, backup_to)
+├── gui_tkinter.py    # Tkinter GUI (forms, lists, add/edit/delete, save/load)
+├── gui_pyqt.py       # PyQt5 GUI (tabbed UI, dialogs, CSV export, DB integration)
+├── hello.py          # Minimal Flask "hello" app (future web extension)
+└── README.md
+
